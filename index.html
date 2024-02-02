@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 98%;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+        .section{
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            flex-direction: column;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid black;
+        }
+        img{
+            object-fit: cover;
+            height: 200px;
+            width: 200px;
+            opacity: 0.5s;
+            /* z-index: -1; */
+        }
+        p{
+            position: absolute;
+            top: -50;
+            z-index: 100;
+            color: white;
+            font-size: 25px;
+        }
+        button{
+            padding: 10px;
+            margin: 5px;
+            background-color: black;
+            border: none;
+            border-radius: 10px;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <img src="237-536x354.jpg" alt="someText">
+            <p>Hii there!</p>
+            <button onclick="btnCLick()">View</button>
+        </div>
+        <div class="section">
+            <img src="237-536x354.jpg" alt="someText">
+            <p>Hii there!</p>
+            <button onclick="btnCLick()">View</button>
+        </div>
+        <div class="section">
+            <img src="237-536x354.jpg" alt="someText">
+            <p>Hii there!</p>
+            <button onclick="btnCLick()">View</button>
+
+        </div>
+        <div class="section">
+            <img src="237-536x354.jpg" alt="someText">
+            <p>Hii there!</p>
+            <button onclick="btnCLick()">View</button>
+
+        </div>
+    </div>
+</body>
+<script>
+   async function fetchData(url){
+      
+    }
+   async function btnCLick(){
+    let response = await fetch("https://dummyjson.com/products/1")
+    let data = await response.json()
+    console.log(data);
+}
+</script>
+</html>
